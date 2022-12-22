@@ -1,0 +1,70 @@
+.nav * {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    box-shadow: 0px 0px 10px gray;
+}
+
+.nav ul {
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 0.2rem;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+}
+
+.nav ul :first-child{
+    margin-right: auto;
+}
+
+.nav ul li {
+    margin: 10px 20px;
+    list-style: none;
+}
+
+.navLink {
+    background-color: red;
+    font-size: 1.75rem;
+    
+}
+
+.top,
+.middle,
+.bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.middle {
+    transform: translateY(7px);
+}
+
+.bottom {
+    transform: translateY(14px);
+}
+
+/* Animation for the menu button. Toggle open class on button */
+.open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+.open .top{
+    transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .middle {
+    display: none;
+}
+.open .bottom{
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
